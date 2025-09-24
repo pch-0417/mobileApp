@@ -68,9 +68,7 @@ fun HomeScreen() {
                         .fillMaxWidth()
                         .wrapContentWidth()
                 )
-            },
-
-
+            }
         },
         content = { innerPadding ->
             Column(

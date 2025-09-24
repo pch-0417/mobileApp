@@ -11,7 +11,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/myapplication" />
             <option value="$PROJECT_DIR$/w03" />
+            <option value="$PROJECT_DIR$/w03/myapplication" />
+            <option value="$PROJECT_DIR$/w04" />
           </set>
         </option>
       </GradleProjectSettings>
