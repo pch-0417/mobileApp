@@ -25,17 +25,22 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color.Companion.Green
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.semantics.Role.Companion.Button
 import androidx.compose.ui.unit.dp
+import com.example.w04.ui.theme.PurpleGrey40
 import java.nio.file.WatchEvent
 
 class MainActivity : ComponentActivity() {
@@ -98,13 +103,13 @@ fun MessageCard(msg: Message) {
         Column {
             Text(
                 text = msg.author,
-                color = MaterialTheme.colorScheme.onBackground,
+                color = PurpleGrey40,
                 style = MaterialTheme.typography.titleMedium
             )
             Spacer(modifier = Modifier.height(2.dp))
             Text(
                 text = msg.body,
-                color = MaterialTheme.colorScheme.onBackground,
+                color = Green,
                 style = MaterialTheme.typography.bodyMedium
             )
 
@@ -124,7 +129,11 @@ fun HomeScreen() {
 
         ) {
              MessageCard(Message("본영:김지우", "너무 귀엽자나~"))
-
+        }
+        Row(modifier = Modifier.fillMaxWidth()){
+            Button(oneClick={}){
+                Text("상세 정보")
+            }
 
         }
     }
@@ -132,17 +141,7 @@ fun HomeScreen() {
 
 
 
-@Preview(
-    name = "Profile Card Dark Mode",
-    uiMode = Configuration.UI_MODE_NIGHT_YES,
-    showBackground = true
-)
-@Composable
-fun PreviewProfileCard() {
-    MYUITheme {
-        ProfileCard(Profile("김지우", "엔믹스"))
-    }
-}
+
 @Preview(
     name = "MessageCard Dark Mode",
     uiMode = Configuration.UI_MODE_NIGHT_YES,
@@ -151,6 +150,6 @@ fun PreviewProfileCard() {
 @Composable
 fun PreviewMessageCard() {
     MYUITheme {
-        MessageCard(Message("Android", "jetpack Compose"))
+        MessageCard(Message("김지우", "많이 매우 귀여움"))
     }
 }
