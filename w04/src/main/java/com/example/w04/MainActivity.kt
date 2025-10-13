@@ -131,9 +131,7 @@ fun HomeScreen() {
              MessageCard(Message("본영:김지우", "너무 귀엽자나~"))
         }
         Row(modifier = Modifier.fillMaxWidth()){
-            Button(oneClick={}){
-                Text("상세 정보")
-            }
+
 
         }
     }
