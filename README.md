@@ -1,5 +1,3 @@
-# mobileApp
+# mobileApp Practice.txt
 
-
-
-<img src="https://capsule-render.vercel.app/api?type=모양&color=색상코드&height=높이&section=header&text=텍스트&fontSize=텍스트크기" />
+<a href="https://myhits.vercel.app"><img src="https://myhits.vercel.app/api/hit/https%3A%2F%2Fmyhits.vercel.app?color=yellow&label=hits&size=medium" alt="hits" /></a>
