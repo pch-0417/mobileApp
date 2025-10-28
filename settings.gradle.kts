@@ -28,3 +28,4 @@ include(":w06")
 
 include(":w03_2")
 include(":w04_2")
+include(":w05_2")
