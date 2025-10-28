@@ -24,3 +24,6 @@
 
 <img width="249" height="571" alt="image" src="https://github.com/user-attachments/assets/909e4ada-b8a6-4883-bb20-74f973ddc17c" />
 
+# ** W6 **
+
+<img width="275" height="607" alt="image" src="https://github.com/user-attachments/assets/e29fd161-db1b-4ded-b5bf-08db8da44f61" />
