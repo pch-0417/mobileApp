@@ -20,12 +20,9 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "MY UI"
-include(":app")
+include(":w01")
 include(":w03")
-include(":w03:myapplication")
-include(":myapplication")
-include(":myapplication")
-include(":w03:myapplication")
 include(":w04")
 include(":w05")
 include(":w06")
+
