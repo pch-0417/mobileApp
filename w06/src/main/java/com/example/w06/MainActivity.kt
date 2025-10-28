@@ -40,6 +40,8 @@
     import androidx.compose.foundation.layout.size
     import androidx.compose.ui.geometry.Offset
     import androidx.compose.ui.graphics.Canvas
+    import androidx.compose.ui.layout.LookaheadScope
+    import androidx.compose.ui.platform.LocalDensity
     import androidx.core.graphics.rotationMatrix
     import com.example.w06.ui.theme.MYUITheme
     import kotlinx.coroutines.delay
@@ -74,6 +76,16 @@
         val velocityX: Float = 0f,
         val velocityY: Float = 0f
     )
+
+    class GameState(
+        internalBubbles: List<Bubble> = emptyList()
+    ){
+        var bubbles by mutableStateOf(internalBubbles)
+        var score by mutableStateOf(0)
+        var isGameOver by mutableStateOf(false)
+        var timeLeft by mutableStateOf(60)
+    }
+
     @Composable
     fun BubbleComposeable(bubble: Bubble, onClick: () -> Unit){
         Canvas(
@@ -96,44 +108,53 @@
 
     @SuppressLint("UnusedBoxWithConstraintsScope")
     @Composable
-    fun BubbleGameScreen(){
-        var score by remember { mutableStateOf(0) }
-        var timeLeft by remember { mutableStateOf(60) }
-        var isGameOver by remember { mutableStateOf(false) }
+    fun BubbleGameScreen() {
+        var gameState = remember { GameState() }
 
-        LaunchedEffect(key1 = isGameOver) {
-            if(!isGameOver && timeLeft > 0){
-                while(true){
+
+        LaunchedEffect(gameState.isGameOver) {
+            if (!gameState.isGameOver && gameState.timeLeft > 0) {
+                while (true) {
                     delay(1000L)
-                    timeLeft--
-                    if(timeLeft == 0){
-                        isGameOver = true
+                    gameState.timeLeft--
+                    if (gameState.timeLeft == 0) {
+                        gameState.isGameOver = true
                         break
+                    }
+                    val currentTime = System.currentTimeMillis()
+                    gameState.bubbles = gameState.bubbles.filter{
+                        currentTime - it.creationTime < 3000
                     }
                 }
             }
         }
 
         Column(modifier = Modifier.fillMaxSize()) {
-            GameStatusRow(score = score, timeLeft = timeLeft)
+            GameStatusRow(score = gameState.score, timeLeft = gameState.timeLeft)
             BoxWithConstraints {
-            val newBubble = Bubble(
-                id = Random.nextInt(),
-                position = Offset(
-                    x = Random.nextFloat() * maxWidth.value,
-                    y = Random.nextFloat() * maxHeight.value
-                ),
-                radius = Random.nextFloat() * 50 + 50,
-                color = Color(
-                    red = Random.nextInt(256),
-                    green = Random.nextInt(256),
-                    blue = Random.nextInt(256),
-                    alpha = 200
-                )
-            )
-            BubbleComposeable(bubble = newBubble) {
-                score++
+                val density = LocalDensity.current
+                val canvasWidthPx = with(density) { maxWidth.toPx() }
+                val canvasHeightPx = with(density) { maxHeight.toPx() }
 
+                LaunchedEffect(key1 = gameState.isGameOver) {
+                    if (!gameState.isGameOver) {
+                        while (true) {
+                            delay(16)
+                            if (gameState.bubbles.isEmpty()) {
+                                val newBubbles = List(3) {
+                                    makeNewBubble(maxWidth, maxHeight)
+                                }
+                                gameState.bubbles = newBubbles
+                            }
+                        }
+                    }
+                    gameState.bubbles.forEach { bubble ->
+                        BubbleComposeable(bubble = bubble) {
+                            gameState.score++
+                            gameState.bubbles=
+                                gameState.bubbles.filterNot {it.id == bubble.id}
+                        }
+                    }
                 }
             }
         }
@@ -153,6 +174,9 @@
         }
 
     }
+
+
+
 
     @Preview(showBackground =  true)
     @Composable
