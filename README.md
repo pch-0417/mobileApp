@@ -17,10 +17,6 @@
 
 <img width="389" height="225" alt="image" src="https://github.com/user-attachments/assets/44dc1fc7-2eea-4e0d-9468-02570e2151b9" />
 
-# ** W2 ** 
-
-
-
 # ** W3 **
 
 <img width="256" height="569" alt="image" src="https://github.com/user-attachments/assets/eb86f56f-e4da-4db4-b773-c5e9d862af4a" />
