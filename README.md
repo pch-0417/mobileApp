@@ -16,34 +16,48 @@
 # ** W1 ** 
 
 <img width="389" height="225" alt="image" src="https://github.com/user-attachments/assets/44dc1fc7-2eea-4e0d-9468-02570e2151b9" />
+  
+-나만의 텍스트 꾸며보기 [ 텍스트font 크기, 모양, 여백공간, 색깔, 위치 잡는 것 ]
 
 # ** W3 **
 
 <img width="256" height="569" alt="image" src="https://github.com/user-attachments/assets/eb86f56f-e4da-4db4-b773-c5e9d862af4a" />
 
+- 우리집 강아지 소개 [버튼 클릭, bottom bar, top bar]
+
 # ** W3-2 **
 
 <img width="316" height="708" alt="image" src="https://github.com/user-attachments/assets/c20ecce0-d321-49d9-a3da-0fb162d0cf53" />
 
+-비밀번호 입력 (XML 이용) [키패트를 만들어 버튼클릭]
 
 # ** W4 ** 
 
 <img width="211" height="167" alt="image" src="https://github.com/user-attachments/assets/6d99a35d-724e-490d-9227-84ea58a53247" />
 
+-프로필 카드만들기 [img 사용]
+
 # ** W4-2 **
 
 <img width="316" height="709" alt="image" src="https://github.com/user-attachments/assets/f0fc5226-016f-4ddf-ab89-f8b900bc8d41" />
 
+- 전화 키패드 만들기
 
 # ** W5 ** 
 
 <img width="249" height="571" alt="image" src="https://github.com/user-attachments/assets/909e4ada-b8a6-4883-bb20-74f973ddc17c" />
 
+- 스탑 워치 만들기 [상태변화 변수 만들기, remember. mutableStateOf()]
+
 # ** W5-1 **
 
 <img width="317" height="709" alt="image" src="https://github.com/user-attachments/assets/8fef0723-3bed-4d07-8c6c-7a877e5c4c27" />
+
+-클릭 버튼 이벤트 [onClick 함수]
 
 
 # ** W6 **
 
 <img width="275" height="607" alt="image" src="https://github.com/user-attachments/assets/e29fd161-db1b-4ded-b5bf-08db8da44f61" />
+
+-버블게임 [calss 사용, 상태변수, 여러가지 람다함수] 
