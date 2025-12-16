@@ -9,6 +9,7 @@
 - W4: 자신만의 프로필 카드를 만들고 그에 맞는 TEXT문구 추가.
 - W5: 타이머를 만들고 상태변수를 다루어봄.
 - W6: 게임을 만들며 상태변수를 더 깊이있게 사용.
+- myapp: 랜덤으로 추가한 리스트에서 선택을 해주는 앱. 
 
 ## 사용코드 
 -코틀린
@@ -61,3 +62,21 @@
 <img width="275" height="607" alt="image" src="https://github.com/user-attachments/assets/e29fd161-db1b-4ded-b5bf-08db8da44f61" />
 
 -버블게임 [calss 사용, 상태변수, 여러가지 람다함수] 
+
+# ** random app **
+
+<img width="1152" height="1018" alt="image" src="https://github.com/user-attachments/assets/edaeed2b-5d90-44db-bf75-290e982314d8" />
+
+<img width="1152" height="1018" alt="image" src="https://github.com/user-attachments/assets/9f4737dc-f2ea-4e13-9d95-ace8ca0deb72" />
+
+<img width="446" height="61" alt="image" src="https://github.com/user-attachments/assets/bd15032a-185c-4f83-b566-65851e79d5ec" />
+
+- 기존 노트북의 성능의 한계로 더이상 구현시 스튜디오가 강제로 튕겨버려 진행 불가능.
+
+- 배웠던 remember, mytablestateOf 등 사용 Lazycolumn 사용.
+
+- 간단하게 배운것을 복습하고 https://github.com/pch-0417/Capstone에서 경진대회 준비가 끝난뒤 손을 놓은 안드로이드 코딩의 감을 잡기 위해 하였다.
+
+- 내 컴퓨터가 아닌 동기들의 컴퓨터를 빌려 수경재배 앱을 개발 해 본 결과 github의 편리함을 매우 많이 느꼇다, 또 의존성 추가로 많이 애 먹었다.
+
+
